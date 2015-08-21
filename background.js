@@ -17,9 +17,8 @@ var beautify = function(){
         console.log('before', $(this).text())
         // codeValues.push($(this).text());
         // withJquery(codeValues.push($(this).text()));
-        var x = $.getScript("extension.js", function(){
-            withJquery($(this).text());
-        })
+        var x = $.getScript();
+        console.log(js_beautify)
 
         // var y = withJquery($(this).text)
         console.log('after', Object.keys(x), x)
@@ -29,6 +28,13 @@ var beautify = function(){
 
 var beautyBtn = document.querySelector('.sidebarbutton');
 beautyBtn.addEventListener('click', beautify);
+
+
+
+
+
+
+
 
 
 
