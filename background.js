@@ -15,24 +15,13 @@ var beautify = function(){
     var codeValues = [];
     $("code").each(function() { 
         console.log('before', $(this).text())
-        // codeValues.push($(this).text());
-        // withJquery(codeValues.push($(this).text()));
-        var x = $.getScript();
-        console.log(js_beautify)
-
-        // var y = withJquery($(this).text)
-        console.log('after', Object.keys(x), x)
+        console.log('after', js_beautify($(this).text()))
     });
-    // console.log(codeValues);
+    console.log(codeValues);
 };
 
 var beautyBtn = document.querySelector('.sidebarbutton');
 beautyBtn.addEventListener('click', beautify);
-
-
-
-
-
 
 
 
