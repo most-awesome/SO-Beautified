@@ -12,19 +12,14 @@ $('.sidebarbutton').css({
 });
 
 var beautify = function(){
-    var codeValues = [];
+    var soBeauty = [];
     $("code").each(function() { 
-        console.log('before', $(this).text())
-        console.log('after', js_beautify($(this).text()))
+        $(this).text(function(){
+            return js_beautify($(this).text(), {indent_size: 6})
+        });
     });
-    console.log(codeValues);
 };
 
 var beautyBtn = document.querySelector('.sidebarbutton');
 beautyBtn.addEventListener('click', beautify);
-
-
-
-
-
 
