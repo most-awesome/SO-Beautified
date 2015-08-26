@@ -12,7 +12,6 @@
         "matches": [ "*://*.stackoverflow.com/*"],
         "js":      ["jquery-2.1.4.min.js","background.js","beautify.js"]
     }],
-  "permissions": [
-   "activeTab"
-   ]
+  "web_accessible_resources": ["css/*", "fonts/*", "js/lib/*", "js/languages/*"],
+  "permissions": [ "activeTab" ]
 }
