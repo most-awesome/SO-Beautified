@@ -15,10 +15,12 @@ var beautify = function(){
     var soBeauty = [];
     $("code").each(function() { 
         $(this).text(function(){
-            return js_beautify($(this).text(), {indent_size: 6})
+            var block = js_beautify($(this).text(), {indent_size: 6})
+            return block;
         });
     });
 };
+
 
 var beautyBtn = document.querySelector('.sidebarbutton');
 beautyBtn.addEventListener('click', beautify);
